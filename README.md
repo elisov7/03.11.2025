@@ -138,7 +138,7 @@
             display: block;
         }
         img {
-            max-width: 40%;
+            max-width: 30%;
             height: auto;
             border-radius: 10px;
         }
