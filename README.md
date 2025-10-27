@@ -137,11 +137,20 @@
             margin: 20px auto;
             display: block;
         }
-        img {
-            max-width: 30%;
-            height: auto;
-            border-radius: 10px;
-        }
+     .first-image {
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .first-image {
+        max-width: 150px;
+        margin-bottom: 20px;
+    }
+}
         @media (max-width: 768px) {
             .plan-section {
                 flex-direction: column;
