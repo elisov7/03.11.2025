@@ -170,6 +170,12 @@
             display: block;
         }
         
+        /* Красный текст */
+        .red-text {
+            color: #ff3333;
+            font-weight: bold;
+        }
+        
         @media (max-width: 768px) {
             .header-section {
                 flex-direction: column;
@@ -232,8 +238,8 @@
         <div class="section">
             <div class="card" style="background-image: url('https://yt3.googleusercontent.com/-cMpuTGN6fsXs149qsbX8X3gNb8bkqc2PrSl75rjsKe2nM0isAczehu4NYCrI9juQlZxSZ1k=s900-c-k-c0x00ffffff-no-rj'); background-size: contain; background-position: center;">
                 <h3>Финансирование операции</h3>
-                <p><strong>На явке (дом):</strong> Расходы покрываю я. Это фонд моего личного спокойствия.</p>
-                <p><strong>На точке X (бар):</strong> Я обеспечиваю один шот на брата. Это не доброта — это тактика. Дальше — партизанская экономика, каждый за себя. Welcome to the real world.</p>
+                <p class="red-text"><strong>На явке (дом):</strong> Расходы покрываю я. Это фонд моего личного спокойствия.</p>
+                <p class="red-text"><strong>На точке X (бар):</strong> Я обеспечиваю один шот на брата. Это не доброта — это тактика. Дальше — партизанская экономика, каждый за себя. Welcome to the real world.</p>
             </div>
         </div>
 
@@ -242,8 +248,8 @@
             <div class="card" style="background-image: url('https://i.pinimg.com/originals/38/e1/3f/38e13f66c0167e1ff1e49cfd1f951100.png'); background-size: contain; background-position: center;">
                 <h3>Твой чек-лист на выживание</h3>
                 <ul class="checklist">
-                    <li>Паспорт. Без него ты никто. Тебя сотрут на входе.</li>
-                    <li>Деньги. Ликвидность = свобода действий. Не подведи группу.</li>
+                    <li class="red-text">Паспорт. Без него ты никто. Тебя сотрут на входе.</li>
+                    <li class="red-text">Деньги. Ликвидность = свобода действий. Не подведи группу.</li>
                 </ul>
             </div>
         </div>
