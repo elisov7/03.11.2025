@@ -139,15 +139,16 @@
             display: block;
         }
         
-        /* ТОЛЬКО ЭТО ИЗМЕНЕНИЕ - уменьшаем первую картинку */
-        .first-image {
+        /* Стиль для ПЕРВОЙ картинки */
+        .small-image {
             max-width: 200px;
+            width: 100%;
             height: auto;
             border-radius: 10px;
         }
         
-        /* Остальные картинки остаются как были */
-        img {
+        /* Стиль для остальных картинок */
+        img:not(.small-image) {
             max-width: 40%;
             height: auto;
             border-radius: 10px;
@@ -168,7 +169,7 @@
             p, .checklist li {
                 font-size: 1em;
             }
-            .first-image {
+            .small-image {
                 max-width: 150px;
             }
         }
@@ -178,7 +179,7 @@
     <div class="container">
         <!-- Раздел с картинкой слева и текстом справа -->
         <div class="plan-section">
-            <img src="https://cs1.livemaster.ru/storage/ac/2e/21e59096db881af7b7a111e10apq--kartiny-i-panno-poster-plakat-volk-s-uoll-strit-50h70sm.jpg" alt="Секретная операция" class="first-image">
+            <img src="https://cs1.livemaster.ru/storage/ac/2e/21e59096db881af7b7a111e10apq--kartiny-i-panno-poster-plakat-volk-s-uoll-strit-50h70sm.jpg" alt="Секретная операция" class="small-image">
             <div class="text">
                 <h1>Операция «ДР 3.11»</h1>
                 <h2>Совершенно секретно</h2>
