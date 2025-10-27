@@ -19,10 +19,10 @@
             padding: 50px;
         }
         
-        /* ИСПРАВЛЕНИЕ: Первый блок с выравниванием по центру */
+        /* Первый блок с выравниванием по центру */
         .header-section {
             display: flex;
-            align-items: center; /* Выравнивание по вертикали по центру */
+            align-items: center;
             gap: 40px;
             margin-bottom: 50px;
             background-color: #1e1e1e;
@@ -32,7 +32,7 @@
         }
         
         .header-image {
-            width: 300px; /* Средний размер */
+            width: 300px;
             height: auto;
             border-radius: 10px;
             flex-shrink: 0;
@@ -41,29 +41,53 @@
         .header-text {
             flex: 1;
             text-align: left;
+            text-decoration: none;
         }
         
         h1, h2 {
             color: #ffcc00;
             font-weight: bold;
             margin: 0;
+            text-decoration: none;
         }
         
         h1 {
             font-size: 3.5em;
             margin-bottom: 15px;
+            text-decoration: none;
         }
         
         h2 {
             font-size: 2em;
+            text-decoration: none;
         }
 
-        /* Остальные стили без изменений */
+        /* Остальные стили */
         p {
             font-size: 1.2em;
             line-height: 1.6;
             margin: 20px 0;
             color: #bbb;
+        }
+        .important {
+            color: #ff3333;
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #ffcc00;
+            color: black;
+            padding: 15px 30px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            width: 250px;
+            margin: 40px auto;
+        }
+        .btn:hover {
+            background-color: #e6b800;
         }
         .section {
             margin: 50px 0;
@@ -82,6 +106,10 @@
             max-width: 45%;
             text-align: left;
         }
+        .plan-section .text p {
+            font-size: 1.1em;
+            color: #ccc;
+        }
         .plan-section iframe {
             width: 100%;
             height: 500px;
@@ -95,6 +123,51 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h3 {
+            font-size: 2em;
+            color: #ffcc00;
+            margin-bottom: 15px;
+        }
+        .checklist {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            font-size: 1.2em;
+            text-align: left;
+        }
+        .checklist li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        .checklist li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ffcc00;
+        }
+        .footer {
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+            margin-top: 50px;
+        }
+        .footer p {
+            font-size: 1.2em;
+            color: #bbb;
+            text-align: center;
+        }
+        .footer .btn {
+            background-color: #e6b800;
+            margin: 20px auto;
+            display: block;
         }
         
         @media (max-width: 768px) {
@@ -112,12 +185,23 @@
             h2 {
                 font-size: 1.5em;
             }
+            .plan-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .plan-section .text, .plan-section iframe {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+            p, .checklist li {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- ИСПРАВЛЕННЫЙ ПЕРВЫЙ БЛОК -->
+        <!-- Первый блок -->
         <div class="header-section">
             <img src="https://cs1.livemaster.ru/storage/ac/2e/21e59096db881af7b7a111e10apq--kartiny-i-panno-poster-plakat-volk-s-uoll-strit-50h70sm.jpg" 
                  alt="Секретная операция" 
@@ -128,7 +212,7 @@
             </div>
         </div>
 
-        <!-- Остальной код без изменений -->
+        <!-- Раздел: План операции -->
         <div class="section">
             <div class="plan-section">
                 <div class="text">
@@ -144,7 +228,38 @@
             </div>
         </div>
 
-        <!-- Остальные секции -->
+        <!-- Раздел: Финансирование операции -->
+        <div class="section">
+            <div class="card" style="background-image: url('https://yt3.googleusercontent.com/-cMpuTGN6fsXs149qsbX8X3gNb8bkqc2PrSl75rjsKe2nM0isAczehu4NYCrI9juQlZxSZ1k=s900-c-k-c0x00ffffff-no-rj'); background-size: contain; background-position: center;">
+                <h3>Финансирование операции</h3>
+                <p><strong>На явке (дом):</strong> Расходы покрываю я. Это фонд моего личного спокойствия.</p>
+                <p><strong>На точке X (бар):</strong> Я обеспечиваю один шот на брата. Это не доброта — это тактика. Дальше — партизанская экономика, каждый за себя. Welcome to the real world.</p>
+            </div>
+        </div>
+
+        <!-- Раздел: Твой чек-лист на выживание -->
+        <div class="section">
+            <div class="card" style="background-image: url('https://i.pinimg.com/originals/38/e1/3f/38e13f66c0167e1ff1e49cfd1f951100.png'); background-size: contain; background-position: center;">
+                <h3>Твой чек-лист на выживание</h3>
+                <ul class="checklist">
+                    <li>Паспорт. Без него ты никто. Тебя сотрут на входе.</li>
+                    <li>Деньги. Ликвидность = свобода действий. Не подведи группу.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Раздел: Способ связи -->
+        <div class="section">
+            <div class="card">
+                <h3>Способ связи</h3>
+                <p>Подтверди явку. От количества тел зависит, сколько мне закупать ресурсов для этой авантюры.</p>
+                <p>Дай знать мне в Telegram (@elisov_7) или ВКонтакте (https://vk.com/elisov_7).</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>[Кодовое имя: Именинник]</p>
+        </div>
     </div>
 </body>
 </html>
