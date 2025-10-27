@@ -70,7 +70,7 @@
             color: #bbb;
         }
         .important {
-            color: #ff3333;
+            color: #ff6b6b;
             font-weight: bold;
         }
         .btn {
@@ -170,10 +170,11 @@
             display: block;
         }
         
-        /* Красный текст */
+        /* Улучшенный красный цвет для читаемости */
         .red-text {
-            color: #ff3333;
+            color: #ff6b6b;
             font-weight: bold;
+            text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
         }
         
         @media (max-width: 768px) {
