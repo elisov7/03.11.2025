@@ -19,20 +19,20 @@
             padding: 50px;
         }
         
-        /* ИЗМЕНЕНИЕ: Первый блок - картинка слева, текст справа */
+        /* ИСПРАВЛЕНИЕ: Первый блок с выравниванием по центру */
         .header-section {
             display: flex;
-            align-items: center;
-            gap: 30px;
+            align-items: center; /* Выравнивание по вертикали по центру */
+            gap: 40px;
             margin-bottom: 50px;
             background-color: #1e1e1e;
-            padding: 30px;
+            padding: 40px;
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
         }
         
         .header-image {
-            width: 200px;
+            width: 300px; /* Средний размер */
             height: auto;
             border-radius: 10px;
             flex-shrink: 0;
@@ -40,26 +40,25 @@
         
         .header-text {
             flex: 1;
+            text-align: left;
         }
         
         h1, h2 {
             color: #ffcc00;
             font-weight: bold;
+            margin: 0;
         }
         
         h1 {
-            font-size: 4em;
-            margin-bottom: 20px;
-            text-align: left;
+            font-size: 3.5em;
+            margin-bottom: 15px;
         }
         
         h2 {
-            font-size: 2.5em;
-            margin-top: 20px;
-            text-align: left;
+            font-size: 2em;
         }
 
-        /* Остальные стили остаются без изменений */
+        /* Остальные стили без изменений */
         p {
             font-size: 1.2em;
             line-height: 1.6;
@@ -97,50 +96,28 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
             margin-bottom: 30px;
         }
-        .checklist {
-            list-style-type: none;
-            padding: 0;
-            margin: 20px 0;
-            font-size: 1.2em;
-            text-align: left;
-        }
-        .checklist li {
-            margin: 10px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-        .checklist li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #ffcc00;
-        }
         
         @media (max-width: 768px) {
             .header-section {
                 flex-direction: column;
                 text-align: center;
+                gap: 20px;
             }
             .header-image {
-                width: 150px;
-            }
-            .plan-section {
-                flex-direction: column;
-            }
-            .plan-section .text, .plan-section iframe {
-                max-width: 100%;
-                margin: 0 auto;
+                width: 250px;
             }
             h1 {
                 font-size: 2.5em;
+            }
+            h2 {
+                font-size: 1.5em;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- ИЗМЕНЕНИЕ: Новый блок заголовка -->
+        <!-- ИСПРАВЛЕННЫЙ ПЕРВЫЙ БЛОК -->
         <div class="header-section">
             <img src="https://cs1.livemaster.ru/storage/ac/2e/21e59096db881af7b7a111e10apq--kartiny-i-panno-poster-plakat-volk-s-uoll-strit-50h70sm.jpg" 
                  alt="Секретная операция" 
@@ -167,7 +144,7 @@
             </div>
         </div>
 
-        <!-- Остальные секции без изменений -->
+        <!-- Остальные секции -->
     </div>
 </body>
 </html>
